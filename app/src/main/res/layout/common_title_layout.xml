@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/rl_top_title"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="@color/green">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/iv_back_operate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@mipmap/general_back_icon"/>
+
+        <TextView
+            android:id="@+id/tv_left_operate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_back_operate"
+            android:padding="10dp"
+            android:text="取消"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/iv_array"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="-8dp"
+            android:layout_toRightOf="@id/tv_left_operate"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_top_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="标题"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"/>
+
+        <ImageView
+            android:id="@+id/iv_right_operate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:padding="8dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_right_operate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="2dp"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:text="保存"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+</RelativeLayout>

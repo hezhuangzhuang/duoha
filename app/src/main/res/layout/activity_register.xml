@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zxwl.duoha.activity.RegisterActivity">
+
+    <com.weiwangcn.betterspinner.library.BetterSpinner
+        android:id="@+id/bs_area_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:drawableBottom="@null"
+        android:drawableRight="@mipmap/ic_launcher"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:paddingTop="0dp"
+        android:text="+86"
+        android:textSize="14sp"/>
+
+    <EditText
+        android:id="@+id/et_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/bs_area_code"
+        android:background="@null"
+        android:hint="请输入您的手机号"
+        android:inputType="phone"
+        android:maxLines="1"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/tv_nickname_lable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/bs_area_code"
+        android:layout_alignRight="@id/bs_area_code"
+        android:layout_below="@id/bs_area_code"
+        android:gravity="center_horizontal"
+        android:text="昵称"
+        android:textSize="14sp"/>
+
+    <EditText
+        android:id="@+id/et_nickname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bs_area_code"
+        android:layout_toRightOf="@id/bs_area_code"
+        android:background="@null"
+        android:hint="请输入您的昵称"
+        android:inputType="phone"
+        android:maxLines="1"
+        android:textSize="14sp"/>
+
+
+    <TextView
+        android:id="@+id/tv_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_nickname_lable"
+        android:gravity="center"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:text="@string/register"/>
+</RelativeLayout>

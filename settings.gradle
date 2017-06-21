@@ -1,0 +1,1 @@
+include ':app',':eSDK_CC_SDK'

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="14dp"
+        android:maxLines="1"
+        android:text="时间"
+        android:textColor="#666666"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_toRightOf="@id/tv_time"
+        android:text="名字"
+        android:textColor="#666666"/>
+
+    <TextView
+        android:layout_marginTop="4dp"
+        android:id="@+id/tv_content"
+        android:layout_marginLeft="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_time"
+        android:layout_marginRight="20dp"
+        android:text="1111111"
+        android:background="@drawable/bg_chat_received"
+        android:textColor="#333333"
+        android:textSize="16sp"/>
+
+</RelativeLayout>

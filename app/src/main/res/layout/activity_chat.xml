@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/rl_root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context="com.zxwl.duoha.activity.ChatActivity">
+
+    <include
+        android:id="@+id/include_title"
+        layout="@layout/common_title_layout"/>
+
+    <FrameLayout
+        android:id="@+id/rl_video"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/include_title">
+
+        <!--远程视频-->
+        <FrameLayout
+        android:id="@+id/fl_remote"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/fl_local"
+            android:layout_width="63dp"
+            android:layout_height="112dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:layout_margin="10dp">
+        </FrameLayout>
+
+        <!--<RelativeLayout-->
+            <!--android:id="@+id/fl_remote"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
+        <!--</RelativeLayout>-->
+
+        <!--本地视频-->
+        <!--<RelativeLayout-->
+            <!--android:id="@+id/fl_local"-->
+            <!--android:layout_width="96dp"-->
+            <!--android:layout_height="54dp"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_gravity="right"-->
+            <!--android:layout_margin="10dp">-->
+        <!--</RelativeLayout>-->
+
+        <include
+            android:id="@+id/controller"
+            layout="@layout/include_controller"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_gravity="bottom"/>
+    </FrameLayout>
+
+    <!--聊天列表-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@+id/rl_video"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:id="@+id/ll_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#D0D3DC"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="6dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="6dp">
+
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_chat_input"
+            android:maxLines="4"
+            android:paddingBottom="6dp"
+            android:paddingLeft="6dp"
+            android:paddingTop="6dp"
+            android:text=""
+            android:textColor="#676767"
+            />
+
+        <TextView
+            android:id="@+id/tv_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="8dp"
+            android:background="@mipmap/icon_send"
+            android:gravity="center"
+            android:paddingBottom="6dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="6dp"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

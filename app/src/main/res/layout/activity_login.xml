@@ -1,0 +1,144 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context="com.zxwl.duoha.activity.LoginActivity">
+
+    <ImageView
+        android:id="@+id/iv_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/bg_login_top"/>
+
+    <include
+        android:id="@+id/include_title"
+        layout="@layout/common_title_layout"
+        android:background="@android:color/white"/>
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_alignBottom="@id/iv_bg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-50dp"
+        android:src="@mipmap/icon_logo"/>
+
+    <android.support.v4.widget.Space
+        android:id="@+id/space"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/tv_login_tab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/iv_logo"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="70dp"
+        android:layout_toLeftOf="@id/space"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="LOGIN"
+        android:textColor="#12C58B"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/tv_sign_tab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/iv_logo"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="70dp"
+        android:layout_toRightOf="@id/space"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="SIGN IN"
+        android:textColor="#666666"
+        android:textSize="18sp"/>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@id/tv_login_tab"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="#EEEEEE"/>
+
+    <View
+        android:id="@+id/move_line"
+        android:layout_width="30dp"
+        android:layout_height="3dp"
+        android:layout_below="@id/tv_login_tab"
+        android:layout_marginLeft="40dp"
+        android:background="@color/green"/>
+
+    <ImageView
+        android:id="@+id/iv_bg_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="25dp"
+        android:background="@mipmap/bg_login_buttom"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tv_arab"
+        android:layout_below="@id/move_line"
+        />
+
+    <View
+        android:id="@+id/center_line"
+        android:layout_width="2px"
+        android:layout_height="200dp"
+        android:layout_alignBottom="@+id/tv_arab"
+        android:layout_alignTop="@+id/tv_arab"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:visibility="invisible"
+        android:layout_marginTop="10dp"
+        android:background="#999999"/>
+
+    <TextView
+        android:id="@+id/tv_arab"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="15dp"
+        android:layout_toLeftOf="@id/center_line"
+        android:gravity="right"
+        android:paddingBottom="10dp"
+        android:paddingRight="24dp"
+        android:paddingTop="10dp"
+        android:text="عربي"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:visibility="invisible"
+        android:id="@+id/tv_english"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv_arab"
+        android:layout_alignTop="@id/tv_arab"
+        android:layout_toRightOf="@id/center_line"
+        android:gravity="left"
+        android:paddingBottom="10dp"
+        android:paddingLeft="24dp"
+        android:paddingTop="10dp"
+        android:text="English"
+        android:textSize="14sp"/>
+
+</RelativeLayout>

@@ -1,0 +1,154 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="com.zxwl.duoha.fragment.ListFragment">
+
+    <com.weiwangcn.betterspinner.library.BetterSpinner
+        android:id="@+id/bs_area_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_bg"
+        android:background="@android:color/transparent"
+        android:drawableBottom="@null"
+        android:drawableRight="@mipmap/ic_launcher"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:paddingTop="0dp"
+        android:text="+86"
+        android:textSize="14sp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tv_phone_lable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/bs_area_code"
+        android:layout_alignRight="@id/bs_area_code"
+        android:layout_below="@id/bs_area_code"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="46dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:paddingLeft="8dp"
+        android:text="@string/phone_lable"
+        android:textColor="#999999"
+        android:textSize="14sp"/>
+
+    <EditText
+        android:id="@+id/et_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_phone_lable"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_toRightOf="@id/bs_area_code"
+        android:background="@drawable/bg_login_input"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:hint="@string/hint_please_enter"
+        android:inputType="phone"
+        android:maxLines="1"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="35dp"
+        android:paddingTop="10dp"
+        android:textColor="#333333"
+        android:textColorHint="#999999"
+        android:textSize="14sp"/>
+
+    <ImageView
+        android:id="@+id/iv_phone_delete"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignBottom="@id/et_phone"
+        android:layout_alignRight="@id/et_phone"
+        android:layout_alignTop="@id/et_phone"
+        android:layout_marginRight="10dp"
+        android:src="@mipmap/icon_circle_close"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tv_nickname_lable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_phone"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="46dp"
+        android:layout_marginTop="25dp"
+        android:gravity="center_horizontal"
+        android:paddingLeft="8dp"
+        android:text="@string/nick_lable"
+        android:textColor="#999999"
+        android:textSize="14sp"/>
+
+    <EditText
+        android:id="@+id/et_nickname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_nickname_lable"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/bg_login_input"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:hint="@string/hint_please_enter"
+        android:maxLines="1"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="35dp"
+        android:paddingTop="10dp"
+        android:textColor="#333333"
+        android:textColorHint="#999999"
+        android:textSize="14sp"/>
+
+    <ImageView
+        android:id="@+id/iv_name_delete"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignBottom="@id/et_nickname"
+        android:layout_alignRight="@id/et_nickname"
+        android:layout_alignTop="@id/et_nickname"
+        android:layout_marginRight="10dp"
+        android:src="@mipmap/icon_circle_close"
+        android:visibility="gone"/>
+
+
+    <ImageView
+        android:id="@+id/iv_bg_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_nickname"
+        android:layout_marginTop="25dp"
+        android:layout_toEndOf="@+id/bs_area_code"
+        android:layout_toRightOf="@+id/bs_area_code"
+        android:background="@mipmap/bg_login_buttom"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tv_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_nickname"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/bg_bt_login"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="@string/login"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/tv_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="没有账号?立即注册"
+        android:visibility="gone"/>
+
+</RelativeLayout>
